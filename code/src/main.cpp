@@ -71,7 +71,7 @@ void conection_message_config(){
   conection_message.text.charSet = F("us-ascii");
   conection_message.text.transfer_encoding = Content_Transfer_Encoding::enc_7bit;
   conection_message.priority = esp_mail_smtp_priority::esp_mail_smtp_priority_low;
-  conection_message.addRecipient("Celso", RECIPIENT_EMAIL);
+  conection_message.addRecipient("", RECIPIENT_EMAIL);
 }
 
 SMTP_Message mail_reception_message;
@@ -83,7 +83,7 @@ void mail_reception_message_config(){
   mail_reception_message.text.charSet = F("us-ascii");
   mail_reception_message.text.transfer_encoding = Content_Transfer_Encoding::enc_7bit;
   mail_reception_message.priority = esp_mail_smtp_priority::esp_mail_smtp_priority_low;
-  mail_reception_message.addRecipient("Celso", RECIPIENT_EMAIL);
+  mail_reception_message.addRecipient("", RECIPIENT_EMAIL);
 }
 
 void send_mail(SMTP_Message mensaje){
